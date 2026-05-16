@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Admin | FusaShop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body>
+    <header class="admin-header">
+      <h1>
+        <i class="fa-solid fa-cart-shopping admin-brand-logo-fallback" aria-hidden="true"></i>
+        <i class="fa-solid fa-screwdriver-wrench"></i> Panel Administrativo
+      </h1>
+      <a href="../index.html"><i class="fa-solid fa-store"></i> Volver a FusaShop</a>
+    </header>
+
+    <main class="admin-layout">
+      <section class="card">
+        <h2><i class="fa-solid fa-box"></i> Crear / Editar producto</h2>
+        <form id="productForm">
+          <input type="hidden" name="id" />
+          <label>Nombre del producto <input name="nombre" required /></label>
+          <label>Descripción <textarea name="descripcion" required></textarea></label>
+          <label>
+            Categoría
+            <select name="categoria" required>
+              <option value="">Seleccione</option>
+            </select>
+          </label>
+          <label>Precio COP <input name="precio" type="number" min="0" required /></label>
+          <label>Stock <input name="stock" type="number" min="0" required /></label>
+          <label>Imagen URL <input name="imagen" type="url" required /></label>
+          <label>
+            Estado
+            <select name="estado" required>
+              <option value="activo">Activo</option>
+              <option value="inactivo">Inactivo</option>
+            </select>
+          </label>
+          <button type="submit"><i class="fa-solid fa-floppy-disk"></i> Guardar producto</button>
+          <button type="button" id="resetForm"><i class="fa-solid fa-broom"></i> Limpiar</button>
+          <p class="feedback" id="productFeedback"></p>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2><i class="fa-solid fa-arrows-rotate"></i> Movimiento de stock</h2>
+        <form id="stockForm">
+          <label>
+            Producto
+            <select name="productoId" required>
+              <option value="">Seleccione</option>
+            </select>
+          </label>
+          <label>
+            Tipo
+            <select name="tipo" required>
+              <option value="entrada">Entrada</option>
+              <option value="salida">Salida</option>
+            </select>
+          </label>
+          <label>Cantidad <input name="cantidad" type="number" min="1" required /></label>
+          <label>Descripción <input name="descripcion" /></label>
+          <button type="submit"><i class="fa-solid fa-clipboard-check"></i> Registrar movimiento</button>
+          <p class="feedback" id="stockFeedback"></p>
+        </form>
+      </section>
+
+      <section class="card card-full">
+        <h2><i class="fa-solid fa-table-list"></i> Productos</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="productTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card card-full">
+        <h2><i class="fa-solid fa-clock-rotate-left"></i> Historial de stock</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Producto</th>
+                <th>Tipo</th>
+                <th>Cantidad</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody id="stockHistoryBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card card-full">
+        <h2><i class="fa-solid fa-id-card"></i> Perfil del autor (edición protegida)</h2>
+        <p class="small-muted">
+          Solo quien conozca el PIN del autor puede modificar estos datos.
+        </p>
+        <div class="author-lock-row">
+          <form id="authorPinSetupForm">
+            <label>Configurar PIN (primera vez)
+              <input type="password" name="pin" minlength="4" placeholder="PIN privado" />
+            </label>
+            <button type="submit"><i class="fa-solid fa-lock"></i> Guardar PIN</button>
+          </form>
+          <form id="authorUnlockForm">
+            <label>Desbloquear edición con PIN
+              <input type="password" name="pin" minlength="4" placeholder="Ingresa tu PIN" />
+            </label>
+            <button type="submit"><i class="fa-solid fa-unlock-keyhole"></i> Desbloquear</button>
+          </form>
+        </div>
+        <form id="authorForm">
+          <label>Nombre <input name="nombre" required /></label>
+          <label>Rol <input name="rol" required /></label>
+          <label>Email <input name="email" type="email" required /></label>
+          <label>GitHub o portafolio <input name="github" /></label>
+          <label>Descripción <textarea name="descripcion" rows="3" required></textarea></label>
+          <button type="submit"><i class="fa-solid fa-user-check"></i> Guardar datos del autor</button>
+          <p class="feedback" id="authorFeedback"></p>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="../js/admin.js"></script>
+  </body>
+</html>

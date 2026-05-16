@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FusaShop — E-commerce MiPymes Fusagasugá</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231a6b3a'/%3E%3Ctext x='50' y='62' font-size='38' text-anchor='middle' fill='white' font-family='Arial'%3EFS%3C/text%3E%3C/svg%3E" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="#home" aria-label="FusaShop inicio">
+          <i class="fa-solid fa-cart-shopping brand-fallback-icon" aria-hidden="true"></i>
+          <span class="brand-text">FusaShop</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#home"><i class="fa-solid fa-house"></i> Inicio</a></li>
+          <li><a href="#productos"><i class="fa-solid fa-store"></i> Productos</a></li>
+          <li><a href="#nosotros"><i class="fa-solid fa-circle-info"></i> Nosotros</a></li>
+          <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contáctanos</a></li>
+          <li><a href="./pages/admin.html"><i class="fa-solid fa-user-gear"></i> Panel Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-logo-wrap">
+            <div class="hero-logo-fallback">
+              <i class="fa-solid fa-shop"></i>
+              <span>FusaShop</span>
+            </div>
+          </div>
+          <h1>Comercio local digital para las MiPymes de Fusagasugá</h1>
+          <p>
+            Compra y vende productos de comerciantes locales con pagos seguros (PayU, Nequi,
+            Daviplata) y el asistente FusaBot para resolver tus dudas.
+          </p>
+          <div class="hero-categories" id="featuredCategories"></div>
+        </div>
+      </section>
+
+      <section id="productos" class="section container">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-layer-group"></i> Catálogo de productos</h2>
+          <div class="filters">
+            <input id="searchInput" type="search" placeholder="Buscar producto por nombre..." />
+            <select id="categoryFilter">
+              <option value="">Todas las categorías</option>
+            </select>
+          </div>
+        </div>
+        <div id="productGrid" class="grid"></div>
+      </section>
+
+      <section id="nosotros" class="section section-muted">
+        <div class="container">
+          <h2><i class="fa-solid fa-people-group"></i> Nosotros</h2>
+          <p>
+            FusaShop es una plataforma e-commerce diseñada para fortalecer las MiPymes de
+            Fusagasugá, Colombia. Permite a los comerciantes locales vender en línea de forma fácil,
+            segura y accesible.
+          </p>
+          <p>
+            <strong>Misión:</strong> digitalizar y empoderar el comercio local, conectando
+            pequeños empresarios con compradores de la región y del país.
+          </p>
+          <p>
+            <strong>Visión:</strong> ser el marketplace referente para MiPymes en Fusagasugá y la
+            región.
+          </p>
+          <p>
+            <strong>Valores:</strong> innovación, inclusión digital, colaboración y servicio a la
+            comunidad empresarial.
+          </p>
+        </div>
+      </section>
+
+      <section id="contacto" class="section container">
+        <h2><i class="fa-solid fa-address-book"></i> Contáctanos</h2>
+        <form id="contactForm" novalidate>
+          <label><i class="fa-regular fa-user"></i> Nombre <input name="name" type="text" required /></label>
+          <label><i class="fa-regular fa-envelope"></i> Correo <input name="email" type="email" required /></label>
+          <label><i class="fa-regular fa-message"></i> Mensaje <textarea name="message" rows="4" required></textarea></label>
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar mensaje</button>
+          <p id="contactFeedback" class="feedback"></p>
+        </form>
+      </section>
+    </main>
+
+    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Abrir chat" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M12 3C6.48 3 2 6.94 2 11.8c0 2.63 1.34 4.99 3.46 6.62L4.5 22l4.14-2.28c1.06.29 2.18.45 3.36.45 5.52 0 10-3.94 10-8.8S17.52 3 12 3zm0 2c4.42 0 8 3.04 8 6.8s-3.58 6.8-8 6.8c-1.13 0-2.2-.2-3.17-.56l-.69-.25-1.58.87.4-1.51-.64-.46C4.86 16.3 4 14.63 4 11.8 4 8.04 7.58 5 12 5zm-3 5a1 1 0 100 2h6a1 1 0 100-2H9zm0 3a1 1 0 100 2h4a1 1 0 100-2H9z"
+        />
+      </svg>
+    </button>
+
+    <aside class="chatbot chatbot-hidden" id="chatbot" aria-hidden="true">
+      <div class="chatbot-header">
+        <h3><i class="fa-solid fa-robot"></i> FusaBot — FusaShop</h3>
+        <button id="chatbotClose" class="chatbot-close" type="button" aria-label="Cerrar chat">×</button>
+      </div>
+      <p class="small" id="chatbotDisclaimer">Responde solo sobre FusaShop: productos, pagos, vendedores y soporte.</p>
+      <div id="chatLangPicker" class="chat-lang-picker" hidden>
+        <p class="chat-lang-picker-intro">
+          Elige en qué idioma quieres conversar con FusaBot.
+          <span class="chat-lang-picker-sub">Choose the language for your conversation with FusaBot.</span>
+        </p>
+        <div class="chat-lang-picker-actions">
+          <button
+            type="button"
+            id="chatLangEs"
+            class="chat-lang-btn"
+            title="Conversar con FusaBot en español"
+            aria-label="Conversar con FusaBot en español"
+          >
+            Español
+          </button>
+          <button
+            type="button"
+            id="chatLangEn"
+            class="chat-lang-btn chat-lang-btn--outline"
+            title="Chat with FusaBot in English"
+            aria-label="Chat with FusaBot in English"
+          >
+            English
+          </button>
+        </div>
+      </div>
+      <div id="chatDeclarationPicker" class="chat-lang-picker" hidden>
+        <div class="chat-lang-picker-actions">
+          <button
+            type="button"
+            id="chatDeclarationBtn"
+            class="chat-lang-btn chat-declaration-btn"
+          >
+            Declaración Persona Transhumana
+          </button>
+        </div>
+      </div>
+      <div id="chatMessages" class="chat-messages"></div>
+      <div id="chatFaqWrap" class="chat-faq-wrap" hidden>
+        <p class="chat-faq-title" id="chatFaqTitle"></p>
+        <div id="chatFaqButtons" class="chat-faq-buttons" role="group"></div>
+      </div>
+      <form id="chatForm">
+        <input id="chatInput" type="text" placeholder="Haz una pregunta sobre FusaShop..." required />
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+      </form>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p><i class="fa-solid fa-location-dot"></i> FusaShop · Fusagasugá, Cundinamarca</p>
+        <p><i class="fa-solid fa-at"></i> contacto@fusashop.co · <i class="fa-solid fa-phone"></i> +57 300 000 0000</p>
+        <p><i class="fa-brands fa-instagram"></i> Instagram · <i class="fa-brands fa-facebook"></i> Facebook · <i class="fa-brands fa-tiktok"></i> TikTok</p>
+        <div id="authorPublicCard" class="author-public-card"></div>
+      </div>
+    </footer>
+
+    <div id="modalRoot"></div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+[
+  {
+    "id": "p-001",
+    "nombre": "Café orgánico de la Vereda El Carmen",
+    "descripcion": "Café tostado artesanal de productores locales de Fusagasugá, bolsa de 500 g.",
+    "categoria": "Alimentos",
+    "precio": 28000,
+    "stock": 45,
+    "imagen": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:00:00.000Z"
+  },
+  {
+    "id": "p-002",
+    "nombre": "Arequipe casero La Casona",
+    "descripcion": "Arequipe tradicional elaborado por MiPyme familiar del centro de Fusagasugá.",
+    "categoria": "Alimentos",
+    "precio": 15000,
+    "stock": 60,
+    "imagen": "https://images.unsplash.com/photo-1606313564200-4f1e448e0c8d?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:03:00.000Z"
+  },
+  {
+    "id": "p-003",
+    "nombre": "Ruana tejida a mano Andina",
+    "descripcion": "Prenda artesanal de lana, diseño regional de artesanos de Cundinamarca.",
+    "categoria": "Artesanías",
+    "precio": 120000,
+    "stock": 12,
+    "imagen": "https://images.unsplash.com/photo-1596755273877-6b57d932f164?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:05:00.000Z"
+  },
+  {
+    "id": "p-004",
+    "nombre": "Canasta en fique tejido",
+    "descripcion": "Canasta decorativa y utilitaria hecha a mano por cooperativa local.",
+    "categoria": "Artesanías",
+    "precio": 45000,
+    "stock": 25,
+    "imagen": "https://images.unsplash.com/photo-1601925260368-ae84f83ba550?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:08:00.000Z"
+  },
+  {
+    "id": "p-005",
+    "nombre": "Camiseta FusaShop edición local",
+    "descripcion": "Camiseta algodón con diseño exclusivo del comercio fusagasugueño.",
+    "categoria": "Moda",
+    "precio": 55000,
+    "stock": 40,
+    "imagen": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:10:00.000Z"
+  },
+  {
+    "id": "p-006",
+    "nombre": "Zapatos deportivos Urban Step",
+    "descripcion": "Calzado deportivo de vendedor MiPyme registrado en FusaShop.",
+    "categoria": "Moda",
+    "precio": 189000,
+    "stock": 18,
+    "imagen": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:11:00.000Z"
+  },
+  {
+    "id": "p-007",
+    "nombre": "Auriculares Bluetooth TechFusa",
+    "descripcion": "Auriculares inalámbricos con cancelación de ruido, tienda tecnológica local.",
+    "categoria": "Tecnología",
+    "precio": 95000,
+    "stock": 30,
+    "imagen": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:12:00.000Z"
+  },
+  {
+    "id": "p-008",
+    "nombre": "Cargador rápido USB-C",
+    "descripcion": "Cargador 65W compatible con smartphones y tablets.",
+    "categoria": "Tecnología",
+    "precio": 42000,
+    "stock": 55,
+    "imagen": "https://images.unsplash.com/photo-1625948515291-696704bf0b0c?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:13:00.000Z"
+  },
+  {
+    "id": "p-009",
+    "nombre": "Juego de ollas antiadherentes",
+    "descripcion": "Set de 5 piezas para cocina, vendedor de electrodomésticos MiPyme.",
+    "categoria": "Hogar",
+    "precio": 145000,
+    "stock": 15,
+    "imagen": "https://images.unsplash.com/photo-1556909114-f6e7ad7d4046?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:14:00.000Z"
+  },
+  {
+    "id": "p-010",
+    "nombre": "Lámpara LED escritorio",
+    "descripcion": "Lámpara regulable con puerto USB, ideal para oficina o estudio.",
+    "categoria": "Hogar",
+    "precio": 68000,
+    "stock": 22,
+    "imagen": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:15:00.000Z"
+  },
+  {
+    "id": "p-011",
+    "nombre": "Kit cuidado facial natural",
+    "descripcion": "Crema, tónico y jabón con ingredientes naturales de producción local.",
+    "categoria": "Salud y bienestar",
+    "precio": 72000,
+    "stock": 28,
+    "imagen": "https://images.unsplash.com/photo-1570175179973-40d04bb5220e?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:16:00.000Z"
+  },
+  {
+    "id": "p-012",
+    "nombre": "Té de hierbas del Sumapaz",
+    "descripcion": "Mezcla de hierbas medicinales de la región, caja x 20 sobres.",
+    "categoria": "Salud y bienestar",
+    "precio": 18000,
+    "stock": 50,
+    "imagen": "https://images.unsplash.com/photo-1564890369478-c89ca71d185e?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:18:00.000Z"
+  },
+  {
+    "id": "p-013",
+    "nombre": "Miel de abejas La Pradera",
+    "descripcion": "Miel pura de apicultores de Fusagasugá, frasco de 350 ml.",
+    "categoria": "Alimentos",
+    "precio": 22000,
+    "stock": 35,
+    "imagen": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:20:00.000Z"
+  },
+  {
+    "id": "p-014",
+    "nombre": "Bolso en cuero artesanal",
+    "descripcion": "Bolso hecho a mano por taller de cuero de la región.",
+    "categoria": "Moda",
+    "precio": 210000,
+    "stock": 8,
+    "imagen": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:22:00.000Z"
+  },
+  {
+    "id": "p-015",
+    "nombre": "Mouse inalámbrico ergonómico",
+    "descripcion": "Mouse óptico para trabajo y estudio, vendedor TechFusa.",
+    "categoria": "Tecnología",
+    "precio": 38000,
+    "stock": 42,
+    "imagen": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&h=600&q=80",
+    "estado": "activo",
+    "fechaCreacion": "2026-05-01T10:25:00.000Z"
+  }
+]

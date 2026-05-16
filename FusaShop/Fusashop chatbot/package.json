@@ -1,0 +1,8 @@
+{
+  "name": "fusashop",
+  "private": true,
+  "scripts": {
+    "start": "serve tienda_deportiva",
+    "dev": "serve tienda_deportiva"
+  }
+}
